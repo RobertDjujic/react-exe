@@ -1,0 +1,19 @@
+.btn {
+  border: none;
+  border-radius: var(--border-rounded);
+  color: var(--color-white);
+  cursor: pointer;
+  padding: 1rem 2rem;
+
+  &--blue {
+    background-color: var(--color-blue-500);
+  }
+
+  &--green {
+    background-color: var(--color-green-500);
+  }
+
+  &--red {
+    background-color: var(--color-red-500);
+  }
+}
