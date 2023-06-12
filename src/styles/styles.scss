@@ -10,6 +10,8 @@ body {
   //colors
   --color-black: #000;
   --color-blue-500: #2980b9;
+  --color-gray-300: #ccc;
+  --color-gray-500: #999;
   --color-green-500: #27ae60;
   --color-red-500: #c0392b;
   --color-white: #fff;
@@ -19,3 +21,6 @@ body {
 }
 
 @import "./components/btn.scss";
+@import "./components/container.scss";
+@import "./components/divider.scss";
+@import "./components/input.scss";
