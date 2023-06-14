@@ -6,6 +6,12 @@
   transition: all 250ms ease-in-out;
   width: 100%;
 
+  &:disabled {
+    border-radius: var(--border-rounded);
+    border: 1px solid var(--color-red-300);
+    opacity: 0.5;
+  }
+
   &:focus {
     border-color: var(--color-gray-500);
     outline: none;
@@ -51,6 +57,7 @@
   &__wrap {
     max-width: 17.5rem;
     position: relative;
+    margin-bottom: 1rem;
   }
 
   &__icon {

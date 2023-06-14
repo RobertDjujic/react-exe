@@ -6,6 +6,7 @@ type InputProps = {
   size?: "sm" | "md" | "lg";
   value: string;
   onChange: (value: string) => void;
+  disabled?: boolean;
 };
 
 const Input = ({
@@ -14,10 +15,12 @@ const Input = ({
   size = "md",
   value,
   onChange,
+  disabled = false,
 }: InputProps) => {
   return (
-    <div className="input__wrap">
+    <div>
       <input
+        disabled={disabled}
         onChange={(e) => onChange(e.target.value)}
         value={value}
         className={`input input--${size} ${icon && "input--has-icon"}`}

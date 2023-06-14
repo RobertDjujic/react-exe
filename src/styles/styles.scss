@@ -13,6 +13,7 @@ body {
   --color-gray-300: #ccc;
   --color-gray-500: #999;
   --color-green-500: #27ae60;
+  --color-red-300: #ff4500;
   --color-red-500: #c0392b;
   --color-white: #fff;
 
@@ -24,3 +25,4 @@ body {
 @import "./components/container.scss";
 @import "./components/divider.scss";
 @import "./components/input.scss";
+@import "./components/modal.scss";
