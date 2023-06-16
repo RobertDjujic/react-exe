@@ -4,7 +4,7 @@ type InputProps = {
   placeholder?: string;
   icon?: ReactNode;
   size?: "sm" | "md" | "lg";
-  value: string;
+  value?: string;
   onChange: (value: string) => void;
   disabled?: boolean;
 };
