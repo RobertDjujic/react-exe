@@ -1,6 +1,6 @@
 type DividerProps = {
-  marginTop?: "sm" | "md" | "lg";
   marginBottom?: "sm" | "md" | "lg";
+  marginTop?: "sm" | "md" | "lg";
 };
 
 const Divider = ({ marginBottom = "md", marginTop = "md" }: DividerProps) => {

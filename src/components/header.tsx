@@ -1,15 +1,11 @@
 import { NavLink } from "react-router-dom";
-import logo from "./../assets/images/astronaut.png";
-
-type LinkType = {
-  isActive: boolean;
-};
+import logo from "./../assets/images/logo.png";
 
 const Header = () => {
   return (
     <div className="header__wrapper">
       <header className="header">
-        <img className="header__logo" src={logo} alt="Logo image." />
+        <img className="header__logo" src={logo} alt="A floating astronaut." />
         <nav className="header__nav">
           <NavLink className={"header__nav__link"} to={"/"}>
             Home

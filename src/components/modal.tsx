@@ -1,29 +1,45 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import Button from "./button";
 import IconClose from "../assets/icons/icon-close";
 
 type ModalProps = {
-  children?: ReactNode;
-  title: string;
+  children: ReactNode;
+  isOpen: boolean;
   onClose: () => void;
-  modal: boolean;
+  onSuccess?: () => void;
+  title: string;
 };
 
-const Modal = ({ children, title, onClose, modal }: ModalProps) => {
+const Modal = ({ children, isOpen, onClose, onSuccess, title }: ModalProps) => {
+  useEffect(() => {
+    const bodyElement = document.getElementsByTagName(
+      "body"
+    )[0] as HTMLBodyElement;
+    if (isOpen) {
+      bodyElement.style.overflow = "hidden";
+    } else {
+      bodyElement.style.overflow = "auto";
+    }
+  }, [isOpen]);
+
   return (
     <>
-      <div className={modal ? "modal__overlay" : ""} onClick={onClose}></div>
-      <div className={modal ? "modal" : "modal--disabled"}>
-        <div className="modal__header">
-          <h1>{title}</h1>
-          <IconClose onClick={onClose} />
+      {isOpen && (
+        <div>
+          <div className="modal__overlay" onClick={onClose}></div>
+          <div className="modal">
+            <div className="modal__header">
+              <div className="modal__header__title">{title}</div>
+              <IconClose className="modal__header__icon" onClick={onClose} />
+            </div>
+            <div className="modal__body">{children}</div>
+            <div className="modal__footer">
+              {onSuccess && <Button onClick={onSuccess} text="Okay" />}
+              <Button color="red" onClick={onClose} text="Cancel" />
+            </div>
+          </div>
         </div>
-        <div className="modal__body">{children}</div>
-        <div className="modal__footer">
-          <Button text="OK" />
-          <Button color="red" text="Cancel" onClick={onClose} />
-        </div>
-      </div>
+      )}
     </>
   );
 };

@@ -1,0 +1,17 @@
+.no-match {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    margin-right: 5rem;
+    width: 20rem;
+  }
+
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__desc {
+    font-size: 2rem;
+  }
+}

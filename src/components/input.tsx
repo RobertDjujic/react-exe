@@ -1,31 +1,34 @@
 import { ReactNode } from "react";
 
 type InputProps = {
-  placeholder?: string;
-  icon?: ReactNode;
-  size?: "sm" | "md" | "lg";
-  value?: string;
-  onChange: (value: string) => void;
   disabled?: boolean;
+  icon?: ReactNode;
+  name?: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  size?: "sm" | "md" | "lg";
+  value: string;
 };
 
 const Input = ({
-  placeholder = "",
+  disabled = false,
   icon,
+  name,
+  onChange,
+  placeholder = "",
   size = "md",
   value,
-  onChange,
-  disabled = false,
 }: InputProps) => {
   return (
     <div>
       <input
-        disabled={disabled}
-        onChange={(e) => onChange(e.target.value)}
-        value={value}
         className={`input input--${size} ${icon && "input--has-icon"}`}
+        disabled={disabled}
+        id={name}
+        onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         type="text"
+        value={value}
       />
       <div className="input__icon">{icon}</div>
     </div>

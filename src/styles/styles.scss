@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -7,23 +8,32 @@ body {
 }
 
 :root {
-  //colors
-  --color-black: #000;
-  --color-blue-500: #2980b9;
-  --color-gray-300: #ccc;
-  --color-gray-500: #999;
-  --color-green-500: #27ae60;
-  --color-red-300: #ff4500;
-  --color-red-500: #c0392b;
-  --color-white: #fff;
-
   //border
   --border-rounded: 0.5rem;
+
+  //colors
+  --color-black: #000;
+  --color-blue-400: #2980b9;
+  --color-blue-500: #136297;
+  --color-gray-300: #ccc;
+  --color-gray-400: #999;
+  --color-gray-500-25: #4b4b4b40;
+  --color-gray-500: #4b4b4b;
+  --color-gray-600: #222222;
+  --color-green-400: #27ae60;
+  --color-green-500: #158f48;
+  --color-orange-300: #ffddb8;
+  --color-orange-400: #fd9e35;
+  --color-red-300: #ff4500;
+  --color-red-400: #c0392b;
+  --color-white: #fff;
 }
 
 @import "./components/btn.scss";
 @import "./components/container.scss";
 @import "./components/divider.scss";
+@import "./components/field.scss";
 @import "./components/header.scss";
 @import "./components/input.scss";
 @import "./components/modal.scss";
+@import "./components/no-match.scss";

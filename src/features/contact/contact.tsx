@@ -1,58 +1,52 @@
 import { useState } from "react";
+import { ValuesType } from "./types";
+import Button from "../../components/button";
 import Container from "../../components/container";
 import Divider from "../../components/divider";
-import Input from "../../components/input";
-import Button from "../../components/button";
+import Field from "../../components/field";
 
-type ObjType = {
-  [key: string]: string;
-};
-
-const obj: ObjType = {
+const initialData: ValuesType = {
   firstName: "",
   lastName: "",
+  eMail: "",
 };
 
 const Contact = () => {
-  const [newInputValue, setNewInputValue] = useState<string>("");
-  const [modal, setModal] = useState<boolean>(false);
-  const [inputsValue, setInputsValue] = useState<ObjType>(obj);
+  const [inputsValue, setInputsValue] = useState<ValuesType>(initialData);
 
   const handleInputsValue = (value: string, id: string) => {
-    const newState: ObjType = { ...inputsValue };
+    const newState: ValuesType = { ...inputsValue };
     newState[id] = value;
     setInputsValue(newState);
   };
 
-  const handleSubmit = () => {
-    return;
-  };
-
   return (
     <Container>
-      <h1>Hello World</h1>
+      <h1>Contact Page</h1>
       <Divider />
       <div>
-        <form action="" onSubmit={handleSubmit}>
-          <div className="field">
-            <label htmlFor="firstName">First Name</label>
-            <Input
-              value={inputsValue.firstName}
-              onChange={(value) => handleInputsValue(value, "First Name")}
-            />
-          </div>
-          <div className="field">
-            <label htmlFor="lastName">Last Name</label>
-            <Input
-              value={inputsValue.lastName}
-              onChange={(value) => handleInputsValue(value, "Last Name")}
-            />
-          </div>
-          <div className="field">
-            <label htmlFor="email">E-Mail</label>
-          </div>
-          <Button text="Send a Message" />
-        </form>
+        <Field
+          id="firstName"
+          label="First Name"
+          onChange={(value) => handleInputsValue(value, "firstName")}
+          value={inputsValue.firstName}
+        />
+        <Field
+          id="lastName"
+          label="Last Name"
+          onChange={(value) => handleInputsValue(value, "lastName")}
+          value={inputsValue.lastName}
+        />
+        <Field
+          id="eMail"
+          label="E-Mail"
+          onChange={(value) => handleInputsValue(value, "eMail")}
+          value={inputsValue.eMail}
+        />
+        <Button
+          onClick={() => console.log(inputsValue)}
+          text="Send a Message"
+        />
       </div>
     </Container>
   );

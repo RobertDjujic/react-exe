@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 type ContainerProps = {
   children: ReactNode;
-  size?: "md" | "sm";
+  size?: "sm" | "md";
 };
 
 const Container = ({ children, size = "md" }: ContainerProps) => {

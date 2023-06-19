@@ -1,19 +1,11 @@
 .input {
   border-radius: var(--border-rounded);
   border: 1px solid var(--color-gray-300);
-  font-size: 1rem;
-  padding: 0.75rem 1.25rem;
   transition: all 250ms ease-in-out;
   width: 100%;
 
-  &:disabled {
-    border-radius: var(--border-rounded);
-    border: 1px solid var(--color-red-300);
-    opacity: 0.5;
-  }
-
-  &:focus {
-    border-color: var(--color-gray-500);
+  &:focus-visible {
+    border-color: var(--color-gray-400);
     outline: none;
   }
 
@@ -54,10 +46,9 @@
     padding-right: 2.25rem;
   }
 
-  &__wrap {
+  &__wrapper {
     max-width: 17.5rem;
     position: relative;
-    margin-bottom: 1rem;
   }
 
   &__icon {

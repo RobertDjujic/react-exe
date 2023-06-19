@@ -1,19 +1,32 @@
 .btn {
-  border: none;
   border-radius: var(--border-rounded);
+  border: none;
   color: var(--color-white);
   cursor: pointer;
   padding: 1rem 2rem;
+  transition: all 250ms ease;
 
   &--blue {
-    background-color: var(--color-blue-500);
+    background-color: var(--color-blue-400);
+
+    &:hover {
+      background-color: var(--color-blue-500);
+    }
   }
 
   &--green {
-    background-color: var(--color-green-500);
+    background-color: var(--color-green-400);
+
+    &:hover {
+      background-color: var(--color-green-500);
+    }
   }
 
   &--red {
-    background-color: var(--color-red-500);
+    background-color: var(--color-red-300);
+
+    &:hover {
+      background-color: var(--color-red-400);
+    }
   }
 }
