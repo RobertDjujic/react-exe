@@ -4,7 +4,6 @@ import Container from "../../components/container";
 import Divider from "../../components/divider";
 import Input from "../../components/input";
 import Modal from "../../components/modal";
-import Money from "./../../assets/icons/money";
 
 const Home = () => {
   const [modal, setModal] = useState<boolean>(false);
