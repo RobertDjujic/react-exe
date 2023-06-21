@@ -26,6 +26,7 @@ body {
   --color-orange-400: #fd9e35;
   --color-red-300: #ff4500;
   --color-red-400: #c0392b;
+  --color-white-35: #ffffff59;
   --color-white: #fff;
 }
 
@@ -37,3 +38,4 @@ body {
 @import "./components/input.scss";
 @import "./components/modal.scss";
 @import "./components/no-match.scss";
+@import "./components/sidebar.scss";

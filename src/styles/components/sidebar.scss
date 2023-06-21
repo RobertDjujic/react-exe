@@ -1,0 +1,51 @@
+.sidebar {
+  background-color: var(--color-blue-500);
+  border-radius: var(--border-rounded);
+  padding: 1.5rem 1rem;
+  position: fixed;
+  left: -20rem;
+  top: 6rem;
+  transition: all 250ms ease;
+  height: calc(100vh - 7rem);
+  width: 17rem;
+
+  &.active {
+    left: 1rem;
+  }
+
+  &__link {
+    display: inline-block;
+    color: var(--color-gray-300);
+    font-size: 1.25rem;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+      background-color: var(--color-white-35);
+      position: absolute;
+      bottom: 0;
+      left: -0.5rem;
+      transition: all 250ms ease;
+      height: 0.5rem;
+      width: 0;
+      z-index: -1;
+    }
+
+    &.active,
+    &:hover {
+      &::before {
+        width: calc(100% + 1rem);
+      }
+    }
+
+    &__wrapper {
+      margin-bottom: 1rem;
+      text-align: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
