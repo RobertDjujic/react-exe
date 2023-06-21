@@ -1,0 +1,35 @@
+.progress-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: var(--border-rounded);
+  color: var(--color-white);
+  padding-right: 0.5rem;
+  transition: all 250ms ease-in-out;
+  height: 100%;
+
+  &__wrap {
+    background-color: var(--color-gray-300);
+    border-radius: var(--border-rounded);
+    margin-top: 1rem;
+    height: 2rem;
+    width: 100%;
+  }
+
+  //state modifiers
+  &--active {
+    background-color: var(--color-gray-500);
+  }
+
+  &--success {
+    background-color: var(--color-green-400);
+  }
+
+  &--warning {
+    background-color: var(--color-orange-400);
+  }
+
+  &--error {
+    background-color: var(--color-red-400);
+  }
+}

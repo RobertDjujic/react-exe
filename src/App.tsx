@@ -4,6 +4,7 @@ import Contact from "./features/contact/contact";
 import Home from "./features/home/home";
 import Layout from "./components/layout";
 import NoMatch from "./features/no-match/no-match";
+import ProgressBarPage from "./features/progress-bar-page/progress-bar-page";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="progress-bar-page" element={<ProgressBarPage />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>

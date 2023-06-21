@@ -20,6 +20,7 @@ body {
   --color-gray-500-25: #4b4b4b40;
   --color-gray-500: #4b4b4b;
   --color-gray-600: #222222;
+  --color-green-300: #9cebbd;
   --color-green-400: #27ae60;
   --color-green-500: #158f48;
   --color-orange-300: #ffddb8;
@@ -30,6 +31,7 @@ body {
   --color-white: #fff;
 }
 
+//components
 @import "./components/btn.scss";
 @import "./components/container.scss";
 @import "./components/divider.scss";
@@ -38,4 +40,8 @@ body {
 @import "./components/input.scss";
 @import "./components/modal.scss";
 @import "./components/no-match.scss";
+@import "./components/progress-bar.scss";
 @import "./components/sidebar.scss";
+
+//pages
+@import "./pages/progress-bar-page.scss";

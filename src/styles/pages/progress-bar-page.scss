@@ -1,0 +1,9 @@
+.progress-bar-page {
+  &__btns {
+    margin-top: 1rem;
+
+    button:first-child {
+      margin-right: 1rem;
+    }
+  }
+}

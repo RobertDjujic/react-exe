@@ -9,7 +9,7 @@ type SidebarProps = {
 const linkList: LinkType[] = [
   {
     label: "Progress bar",
-    path: "/progress-bar",
+    path: "/progress-bar-page",
   },
   {
     label: "Loader",
