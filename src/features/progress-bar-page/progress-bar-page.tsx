@@ -20,17 +20,21 @@ const ProgressBarPage = () => {
     <Container>
       <h1>Progress Bar</h1>
       <Divider />
-      <ProgressBar progress={progress} state={handleState(progress)} />
+      <ProgressBar
+        onFinish={() => console.log("Loading finished!")}
+        progress={progress}
+        state={handleState(progress)}
+      />
       <div className="progress-bar-page__btns">
         <Button
           color={progress === 0 ? "disabled" : "green"}
-          disabled={progress === 0}
+          disabled={progress === 0 && true}
           onClick={() => setProgress(progress - 5)}
           text="Minus 5%"
         />
         <Button
           color={progress === 100 ? "disabled" : "green"}
-          disabled={progress === 100}
+          disabled={progress === 100 && true}
           onClick={() => setProgress(progress + 5)}
           text="Plus 5%"
         />
