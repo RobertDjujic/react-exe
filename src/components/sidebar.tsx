@@ -13,7 +13,11 @@ const linkList: LinkType[] = [
   },
   {
     label: "Loader",
-    path: "/loader",
+    path: "/loader-page",
+  },
+  {
+    label: "Select",
+    path: "/select-page",
   },
 ];
 

@@ -15,6 +15,7 @@ body {
   --color-black: #000;
   --color-blue-400: #2980b9;
   --color-blue-500: #136297;
+  --color-gray-300-50: #cccccc80;
   --color-gray-300: #ccc;
   --color-gray-400: #999;
   --color-gray-500-25: #4b4b4b40;
@@ -38,9 +39,11 @@ body {
 @import "./components/field.scss";
 @import "./components/header.scss";
 @import "./components/input.scss";
+@import "./components/loader.scss";
 @import "./components/modal.scss";
 @import "./components/no-match.scss";
 @import "./components/progress-bar.scss";
+@import "./components/select.scss";
 @import "./components/sidebar.scss";
 
 //pages

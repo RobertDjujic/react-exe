@@ -1,0 +1,53 @@
+.select {
+  position: relative;
+  width: 20rem;
+
+  &__action {
+    border-radius: var(--border-rounded);
+    border: 1px solid var(--color-gray-400);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    user-select: none;
+
+    svg {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 250ms ease-in-out;
+    }
+
+    &.isActive {
+      svg {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__list {
+    background-color: var(--color-gray-300);
+    border-radius: var(--border-rounded);
+    border: 1px solid var(--color-gray-400);
+    padding: 1rem 0.5rem;
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    width: 20rem;
+
+    &__item {
+      border-radius: var(--border-rounded);
+      cursor: pointer;
+      margin-bottom: 0.25rem;
+      padding: 0.5rem;
+      transition: all 250ms ease-in-out;
+      user-select: none;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: var(--color-white);
+      }
+    }
+  }
+}
