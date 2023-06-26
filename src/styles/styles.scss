@@ -9,6 +9,7 @@ body {
 
 :root {
   //border
+  --border-circle: 1000rem;
   --border-rounded: 0.5rem;
 
   //colors
@@ -26,14 +27,21 @@ body {
   --color-green-500: #158f48;
   --color-orange-300: #ffddb8;
   --color-orange-400: #fd9e35;
+  --color-orange-500: #b96f1a;
   --color-red-300: #ff4500;
   --color-red-400: #c0392b;
   --color-white-35: #ffffff59;
   --color-white: #fff;
 }
 
+//responsive breakpoints
+$media-sm: 37.5em;
+$media-md: 53em;
+$media-lg: 64em;
+
 //components
 @import "./components/btn.scss";
+@import "./components/card.scss";
 @import "./components/container.scss";
 @import "./components/divider.scss";
 @import "./components/field.scss";
@@ -42,9 +50,13 @@ body {
 @import "./components/loader.scss";
 @import "./components/modal.scss";
 @import "./components/no-match.scss";
+@import "./components/pagination.scss";
 @import "./components/progress-bar.scss";
 @import "./components/select.scss";
 @import "./components/sidebar.scss";
 
 //pages
 @import "./pages/progress-bar-page.scss";
+
+//utils
+@import "./utils/grid.scss";

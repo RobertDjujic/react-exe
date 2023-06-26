@@ -16,6 +16,10 @@ const headerLinks: LinkType[] = [
     label: "Kontakt",
     path: "/contact",
   },
+  {
+    label: "Animals",
+    path: "/animals",
+  },
 ];
 
 const Header = ({ onClose, toggleSidebar }: HeaderProps) => {
