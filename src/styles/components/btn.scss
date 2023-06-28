@@ -33,4 +33,35 @@
       background-color: var(--color-red-400);
     }
   }
+
+  &--floating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-orange-400);
+    border-radius: var(--border-circle);
+    border: none;
+    box-shadow: 0 0.125rem 0.75rem 0px var(--color-gray-400);
+    cursor: pointer;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    transition: all 250ms ease-in-out;
+    height: 5rem;
+    width: 5rem;
+
+    @media (min-width: $media-sm) {
+      bottom: 4rem;
+      right: 4rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      display: block;
+      width: 2rem;
+    }
+  }
 }

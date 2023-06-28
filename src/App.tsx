@@ -8,6 +8,7 @@ import ProgressBarPage from "./features/progress-bar/progress-bar-page";
 import LoaderPage from "./features/loader/loader-page";
 import SelectPage from "./features/select/select-page";
 import Animals from "./features/animals/animals";
+import AnimalCreate from "./features/animals/animal-create";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="loader-page" element={<LoaderPage />} />
           <Route path="select-page" element={<SelectPage />} />
           <Route path="animals" element={<Animals />} />
+          <Route path="animals/new" element={<AnimalCreate />} />
+          <Route path="animals/:animalId" />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>

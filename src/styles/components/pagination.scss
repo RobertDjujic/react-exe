@@ -26,5 +26,15 @@
       background-color: var(--color-orange-400);
       border-color: var(--color-orange-500);
     }
+
+    &.isDisabled {
+      opacity: 0.5;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    svg {
+      display: block;
+    }
   }
 }

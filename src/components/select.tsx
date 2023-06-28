@@ -3,18 +3,22 @@ import ChevronDown from "../assets/icons/chevron-down";
 import { OptionType } from "../features/select/select-page";
 
 type SelectProps = {
+  defaultValue?: OptionType;
   onChange: (option: OptionType) => void;
   options: OptionType[];
   placeholder?: string;
 };
 
 const Select = ({
+  defaultValue,
   onChange,
   options,
   placeholder = "Select an option",
 }: SelectProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
-  const [activeOption, setActiveOption] = useState<OptionType | null>(null);
+  const [activeOption, setActiveOption] = useState<OptionType | null>(
+    defaultValue ? defaultValue : null
+  );
 
   return (
     <div className="select">

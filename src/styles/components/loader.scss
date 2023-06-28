@@ -10,6 +10,7 @@
   transform: translate3d(-50%, -50%, 0);
   height: 20rem;
   width: 20rem;
+  z-index: 20;
 
   &__overlay {
     background-color: var(--color-gray-500-25);
@@ -18,5 +19,6 @@
     left: 0;
     right: 0;
     top: 0;
+    z-index: 10;
   }
 }
