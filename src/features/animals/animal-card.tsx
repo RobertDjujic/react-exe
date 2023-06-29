@@ -2,14 +2,16 @@ import { AnimalType } from "./animals";
 import imgDiet from "./../../assets/images/diet.png";
 import imgHabitat from "./../../assets/images/habitat.png";
 import imgAnimalClass from "./../../assets/images/animal-class.png";
+import Button from "../../components/button";
 
 type AnimalCardProps = {
   animal: AnimalType;
+  onDelete: (id: string) => void;
 };
 
-const AnimalCard = ({ animal }: AnimalCardProps) => {
+const AnimalCard = ({ animal, onDelete }: AnimalCardProps) => {
   //Na ovaj način raspakiramo objekt kako ne bismo stalno morali pisat "animal" kad ga mapiramo
-  const { name, animalClass, diet, species, habitat } = animal;
+  const { name, animalClass, diet, species, habitat, id } = animal;
 
   return (
     <div className="card">
@@ -40,6 +42,7 @@ const AnimalCard = ({ animal }: AnimalCardProps) => {
         <img src={imgHabitat} alt="Icon for an animal's habitat." />
         <span>{habitat}</span>
       </div>
+      <Button color="red" onClick={() => onDelete(id)} text="delete" />
     </div>
   );
 };

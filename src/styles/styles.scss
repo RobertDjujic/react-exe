@@ -28,6 +28,7 @@ body {
   --color-orange-300: #ffddb8;
   --color-orange-400: #fd9e35;
   --color-orange-500: #b96f1a;
+  --color-red-200: #f0d1d1;
   --color-red-300: #ff4500;
   --color-red-400: #c0392b;
   --color-white-35: #ffffff59;
@@ -48,6 +49,7 @@ $media-lg: 64em;
 @import "./components/header.scss";
 @import "./components/input.scss";
 @import "./components/loader.scss";
+@import "./components/message.scss";
 @import "./components/modal.scss";
 @import "./components/no-match.scss";
 @import "./components/pagination.scss";
