@@ -4,6 +4,22 @@
   margin-bottom: 1rem;
   padding: 1rem;
 
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--border-rounded);
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 250ms ease;
+    background-color: var(--color-red-300);
+
+    &:hover {
+      background-color: var(--color-red-400);
+    }
+  }
+
   &__header {
     display: flex;
     align-items: center;
@@ -13,7 +29,33 @@
       border-radius: var(--border-circle);
       width: 3rem;
       height: 3rem;
-      margin-right: 0.5rem;
+
+      &__wrapper {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        margin-right: 0.5rem;
+
+        svg {
+          fill: var(--color-red-300);
+          color: var(--color-white);
+          font-weight: bold;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          visibility: hidden;
+          width: 2rem;
+        }
+
+        &:hover {
+          opacity: 0.8;
+
+          svg {
+            visibility: visible;
+          }
+        }
+      }
     }
   }
 

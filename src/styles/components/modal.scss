@@ -9,6 +9,7 @@
   top: 10vh;
   height: 80vh;
   width: 80vw;
+  z-index: 1000;
 
   &__overlay {
     background-color: var(--color-gray-500-25);

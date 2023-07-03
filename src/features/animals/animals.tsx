@@ -9,6 +9,8 @@ import Loader from "../../components/loader";
 import Pagination from "../../components/pagination";
 import Select from "../../components/select";
 import { dataHeaders } from "./animal-create";
+import Modal from "../../components/modal";
+import Button from "../../components/button";
 
 export type AnimalType = {
   id: string;
@@ -41,6 +43,8 @@ const Animals = () => {
   //rows per page
   const [rpp, setRpp] = useState<number>(8);
   const [noOfItems, setNoOfItems] = useState<number>(0);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [animalId, setAnimalId] = useState<string>("");
 
   const navigate = useNavigate();
 
@@ -107,35 +111,52 @@ const Animals = () => {
   }, [page, rpp, noOfItems]);
 
   return (
-    <Container>
-      <Loader isActive={loading} />
-      <div className="animals__header">
-        <h1 className="animals__header__title">Animals</h1>
-        <Select
-          defaultValue={rppOptions[1]}
-          options={rppOptions}
-          onChange={(activeRpp) => setRpp(Number(activeRpp.value))}
+    <>
+      <Modal
+        title="Are you sure?"
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
+        <p>If you're sure you wish to delete this animal, click "Yes".</p>
+        <Button
+          text="Yes"
+          onClick={() => {
+            handleDelete(animalId);
+            setIsOpen(false);
+          }}
         />
-      </div>
-      <Divider />
-      <div className="grid grid--primary">
-        {animals.map((animal) => {
-          return (
-            <AnimalCard
-              onDelete={(id: string) => handleDelete(id)}
-              key={animal.name}
-              animal={animal}
-            />
-          );
-        })}
-      </div>
-      <Pagination
-        activePage={page}
-        noOfPages={Math.ceil(noOfItems / rpp)}
-        onPaginate={(activePage) => setPage(activePage)}
-      />
-      <FloatingButton onClick={() => navigate("/animals/new/")} />
-    </Container>
+      </Modal>
+      <Container>
+        <Loader isActive={loading} />
+        <div className="animals__header">
+          <h1 className="animals__header__title">Animals</h1>
+          <Select
+            defaultValue={rppOptions[1]}
+            options={rppOptions}
+            onChange={(activeRpp) => setRpp(Number(activeRpp.value))}
+          />
+        </div>
+        <Divider />
+        <div className="grid grid--primary">
+          {animals.map((animal) => {
+            return (
+              <AnimalCard
+                onOpen={() => setIsOpen(true)}
+                onDelete={(id: string) => setAnimalId(id)}
+                key={animal.name}
+                animal={animal}
+              />
+            );
+          })}
+        </div>
+        <Pagination
+          activePage={page}
+          noOfPages={Math.ceil(noOfItems / rpp)}
+          onPaginate={(activePage) => setPage(activePage)}
+        />
+        <FloatingButton onClick={() => navigate("/animals/new/")} />
+      </Container>
+    </>
   );
 };
 
