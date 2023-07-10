@@ -19,6 +19,10 @@ const linkList: LinkType[] = [
     label: "Select",
     path: "/select-page",
   },
+  {
+    label: "Weather",
+    path: "/weather",
+  },
 ];
 
 const Sidebar = ({ isOpen, onClose }: SidebarProps) => {

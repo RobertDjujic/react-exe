@@ -1,16 +1,16 @@
+import { dataHeaders } from "./animal-create";
 import { OptionType } from "../select/select-page";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AnimalCard from "./animal-card";
+import Button from "../../components/button";
 import Container from "../../components/container";
 import Divider from "../../components/divider";
 import FloatingButton from "../../components/floating-button";
 import Loader from "../../components/loader";
+import Modal from "../../components/modal";
 import Pagination from "../../components/pagination";
 import Select from "../../components/select";
-import { dataHeaders } from "./animal-create";
-import Modal from "../../components/modal";
-import Button from "../../components/button";
 
 export type AnimalType = {
   id: string;

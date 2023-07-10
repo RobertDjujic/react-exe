@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -28,11 +28,17 @@ body {
   --color-orange-300: #ffddb8;
   --color-orange-400: #fd9e35;
   --color-orange-500: #b96f1a;
+  --color-orange-600: #f33d1d;
+  --color-purple-400: #503cd1;
+  --color-purple-500: #3d2bb8;
   --color-red-200: #f0d1d1;
   --color-red-300: #ff4500;
   --color-red-400: #c0392b;
+  --color-red-500: #e4270f;
   --color-white-35: #ffffff59;
   --color-white: #fff;
+  --color-yellow-300: #ffdd00;
+  --color-yellow-400: #fbb034;
 }
 
 //responsive breakpoints
@@ -42,6 +48,7 @@ $media-lg: 64em;
 
 //components
 @import "./components/btn.scss";
+@import "./components/button-box.scss";
 @import "./components/card.scss";
 @import "./components/container.scss";
 @import "./components/divider.scss";
@@ -54,11 +61,14 @@ $media-lg: 64em;
 @import "./components/no-match.scss";
 @import "./components/pagination.scss";
 @import "./components/progress-bar.scss";
+@import "./components/screen.scss";
 @import "./components/select.scss";
 @import "./components/sidebar.scss";
+@import "./components/wrapper.scss";
 
 //pages
 @import "./pages/animals.scss";
+@import "./pages/calculator.scss";
 @import "./pages/progress-bar-page.scss";
 
 //utils
